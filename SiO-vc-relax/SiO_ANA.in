@@ -3,8 +3,7 @@ calculation='vc-relax',
 restart_mode='from_scratch',
 pseudo_dir = './',
 outdir='./',
-prefix = 'scf_',
-disk_io = 'none'
+prefix = 'scf_'
 /
 &system
 ibrav=0, celldm(1)=1, ecutwfc=30, ecutrho = 400,
