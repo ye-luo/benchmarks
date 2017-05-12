@@ -6,7 +6,7 @@ outdir='./',
 prefix = 'scf_'
 /
 &system
-ibrav=0, celldm(1)=1, ecutwfc=20, ecutrho = 400,
+ibrav=0, celldm(1)=1, ecutwfc=30, ecutrho = 400,
 occupations = 'smearing', smearing = 'gauss', degauss = 0.01,
 nat=24 ntyp=2
 /
@@ -54,4 +54,4 @@ O          0.37500000         0.62500000         0.87500000
 O          0.87500000         0.37500000         0.62500000
 O          0.37500000         0.87500000         0.62500000
 K_POINTS (automatic)
-1 1 1  0 0 0
+2 2 2  0 0 0
