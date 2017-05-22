@@ -40,11 +40,11 @@ ncpu=`cat $PBS_NODEFILE | wc -w`
 nnodes=`cat $PBS_NODEFILE | uniq | wc -w`
 
 export OMP_NUM_THREADS=1
+export MKL_NUM_THREADS=1
 export I_MPI_HYDRA_PMI_CONNECT=alltoall
 export KMP_AFFINITY=scatter
 export I_MPI_EAGER_THRESHOLD=2097152
 export I_MPI_INTRANODE_EAGER_THRESHOLD=2097152
-export MKL_NUM_THRADS=1
 export KMP_AFFINITY=scatter,granularity=fine,1
 
 
