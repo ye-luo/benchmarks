@@ -8,3 +8,5 @@
 | CsI_3264nmm.cif/27/CINECA/Marconi-A2                         | Intel(R) Xeon Phi(TM) CPU 7250 @ 1.40GHz                     |   1284.35 |
 | CsI_3264nmm.cif/48/CINECA/Marconi-A2                         | Intel(R) Xeon Phi(TM) CPU 7250 @ 1.40GHz                     |  10819.13 |
 | CsI_3264nmm.cif/12/CINECA/Marconi-A2                         | Intel(R) Xeon Phi(TM) CPU 7250 @ 1.40GHz                     |    143.24 |
+| Na2O_4242nmnm.cif/8/CINECA/Marconi-A2                        | Intel(R) Xeon Phi(TM) CPU 7250 @ 1.40GHz                     |    252.55 |
+| Fe_Graphene-scf/CINECA/Marconi-A2                            | Intel(R) Xeon Phi(TM) CPU 7250 @ 1.40GHz                     |    263.86 |
