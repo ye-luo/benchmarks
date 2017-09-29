@@ -2,6 +2,7 @@
 
 | Input                                                        | CPU                                                          | electrons | k-points  | Best time |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | --------- | --------- | --------- |
+| Si63Ge-scf/CSCS/KNL (qe+sirius) (1 node, 64 ranks)           | Intel(R) Xeon Phi (TM) CPU 7230 @ 1.30Ghz                    |    266.00 |         4 |    142.00 |
 | Si63Ge-vc-relax/CINECA/Marconi-A2                            | Intel(R) Xeon Phi(TM) CPU 7250 @ 1.40GHz                     |    266.00 |        10 |    292.49 |
 | Si63Ge-vc-relax/CSCS/KNL                                     | Intel(R) Xeon Phi(TM) CPU 7230 @ 1.30GHz                     |    266.00 |        10 |    291.67 |
 | Si63Ge-vc-relax/CSCS/BW                                      | Intel(R) Xeon(R) CPU E5-2695 v4 @ 2.10GHz                    |    266.00 |        10 |    233.86 |
