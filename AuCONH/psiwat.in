@@ -7,7 +7,7 @@
       pseudo_dir = './',
       outdir = './',
       max_seconds = 21400
-      !disk_io = 'none'
+      disk_io = 'none'
    /
    &SYSTEM
       ibrav=8,
@@ -16,15 +16,15 @@
       celldm(3)=3.2144896
       nat=586
       ntyp=5
-      ecutwfc=25.0,
-      ecutrho=200.0,
+      ecutwfc=40,
+      ecutrho=400.0,
       occupations='smearing',
       smearing='gaussian',
-      degauss=0.004,
+      degauss=0.01,
    /
    &ELECTRONS
       diagonalization = 'david'
-      electron_maxstep = 5,
+      electron_maxstep = 100,
       mixing_mode = 'plain',
       mixing_beta = 0.3,
       conv_thr =  1.0d-8,
