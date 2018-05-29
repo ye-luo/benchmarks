@@ -21,7 +21,7 @@
 		</species>
 	</structure>
 	<groundstate do="fromscratch" epsengy="1e-6" gmaxvr="20.0" maxscl="100" ngridk="2 2 2" rgkmax="7.0">
-	 <spin/>
+	 <spin reducebf="0.9"/>
 	<libxc correlation="XC_GGA_C_PBE" exchange="XC_GGA_X_PBE"/>
 	 </groundstate>
 </input>
