@@ -4,7 +4,9 @@
         "processing_unit" : "cpu",    
         "std_evp_solver_type" : "lapack",
         "gen_evp_solver_type" : "lapack",
-        "verbosity" : 2
+        "verbosity" : 2,
+        "rmt_max" : 3,
+        "print_neighbors" : true
     },
 
     "parameters" : {
@@ -15,7 +17,7 @@
         "auto_rmt" : 1,
         "num_mag_dims" : 1,
         "num_dft_iter" : 150,
-        "ngridk" : [4,4,4],
+        "ngridk" : [2,2,2],
         "use_symmetry" : true,
         "pw_cutoff" : 12,
         "aw_cutoff" : 7,
@@ -27,9 +29,9 @@
     },
 
     "mixer" : {
-        "beta" : 0.6,
-        "beta0" : 0.1,
-        "linear_mix_rms_tol": 0.1,
+        "beta" : 0.85,
+        "!beta0" : 0.1,
+        "!linear_mix_rms_tol": 0.1,
         "type" : "broyden2",
         "max_history" : 8
     }, 
