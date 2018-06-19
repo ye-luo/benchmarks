@@ -1,53 +1,42 @@
 {
     "control" : {
         "cyclic_block_size" : 32,
-        "processing_unit" : "gpu",
-        "std_evp_solver_type" : "lapack",
-        "gen_evp_solver_type" : "lapack",
-        "verbosity" : 2,
-        "verification" : 0,
-        "print_neighbors" : false,
-        "print_memory_usage" : false,
-        "print_performance" : false,
-        "print_checksum" : false
-    },
-
-    "settings" : {
-        "auto_enu_tol" : 0.1
+        "processing_unit" : "cpu",
+        "std_evp_solver_type" : "scalapack",
+        "gen_evp_solver_type" : "scalapack",
+        "verbosity" : 3,
+        "verification" : 0
     },
 
     "parameters" : {
         "electronic_structure_method" : "full_potential_lapwlo",
         "xc_functionals" : ["XC_LDA_X", "XC_LDA_C_VWN"],
-        "!xc_functionals" : ["XC_GGA_X_PBE", "XC_GGA_C_PBE"],
-        "smearing_width" : 0.001,
+        "smearing_width" : 0.05,
         "valence_relativity" : "none",
         "core_relativity" : "none",
-        "num_fv_states" : 300,
-        "aw_cutoff" : 5,
-        "pw_cutoff" : 30.00,
+        "num_fv_states" : 200,
+        "aw_cutoff" : 5.0,
+        "pw_cutoff" : 40.00,
         "auto_rmt" : 0,
         "use_symmetry": true,
         "ngridk" : [1,1,1],
         "potential_tol" : 1e-7,
         "energy_tol" : 1e-6,
-        "num_dft_iter" : 200,
+        "num_dft_iter" : 150,
         "num_mag_dims" : 1,
         "lmax_apw"     : 8,
         "lmax_pot"     : 8,
         "lmax_rho"     : 8,
-        "molecule"     : true,
-        "reduce_aux_bf" : 0.7
+        "molecule"     : true
     },
 
     "iterative_solver" : {
-        "energy_tolerance" : 1e-13,
+        "energy_tolerance" : 1e-4,
         "residual_tolerance" : 1e-6,
-        "num_steps" : 32,
+        "num_steps" : 24,
         "subspace_size" : 8,
         "type" : "davidson",
-        "converge_by_energy" : 1,
-        "num_singular" : 20
+        "converge_by_energy" : 1
     },
 
     "unit_cell" : { 
@@ -61,10 +50,10 @@
         "atom_types" : ["C", "H", "Mn", "N"], 
    
         "atom_files" : {
-            "C" : "C.json", 
-            "H" : "H.json", 
-            "Mn" : "Mn.json", 
-            "N" : "N.json" 
+            "C" : "./atoms/C.json", 
+            "H" : "./atoms/H.json", 
+            "Mn" : "./atoms/Mn.json", 
+            "N" : "./atoms/N.json" 
         },
    
         "atom_coordinate_units" : "A", 
@@ -120,7 +109,7 @@
                      [  -3.7522500000000001,   -5.3029440000000001,   -2.4017020000000002  ]  
                    ],
             "Mn" : [ 
-                     [  -1.6933439999999997,   -1.6894450000000010,   -1.6980560000000011 ,0 ,0 , 4 ]  
+                     [  -1.6933439999999997,   -1.6894450000000010,   -1.6980560000000011 ,0 ,0 , 2 ]  
                    ],
             "N" : [ 
                      [  -1.7743570000000002,    0.2794709999999991,   -1.7267320000000002  ], 
@@ -136,12 +125,11 @@
     },
     
     "mixer" : {
-        "beta" : 0.75,
-        "beta_scaling_factor" : 0.9,
+        "beta" : 0.6,
         "beta0" : 0.05,
-        "!linear_mix_rms_tol": 0.1,
-        "type" : "broyden1",
-        "max_history" :8
+        "linear_mix_rms_tol": 0.05,
+        "type" : "broyden2",
+        "max_history" : 8
     }, 
 
     "kpoints_rel": {
