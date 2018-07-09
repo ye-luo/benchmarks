@@ -1,0 +1,28 @@
+#!/bin/bash
+#SBATCH -J test
+#SBATCH -A QEperformance
+#SBATCH -p knlall
+#SBATCH -C knl,quad,cache
+#SBATCH -N 32
+#SBATCH --ntasks-per-node=4
+#SBATCH -t 02:00:00
+
+my_path=~/bin/qe-6.2.1/knl-omp
+exe=$my_path/pw.x
+
+HT=1
+PROCS_PERNODE=$SLURM_NTASKS_PER_NODE
+PROCS=$((SLURM_JOB_NUM_NODES * PROCS_PERNODE))
+export OMP_NUM_THREADS=$((64 / PROCS_PERNODE))
+ndiag=25
+
+export I_MPI_PROVIDER=psm2
+export I_MPI_FALLBACK=0
+export I_MPI_FABRICS=shm:tmi
+export PSM2_RCVTHREAD=0
+export TMI_PSM2_TEST_POLL=1
+
+for ntg in 16 32 #1 2 4 8
+do
+mpirun -np $PROCS -perhost $PROCS_PERNODE $exe -npool 4 -ntg $ntg -ndiag $ndiag -inp psiwat.in > pw-${PROCS_PERNODE}rpn-${OMP_NUM_THREADS}t-4pool-${ndiag}diag-${ntg}ntg.out
+done

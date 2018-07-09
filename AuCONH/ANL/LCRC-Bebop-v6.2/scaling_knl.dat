@@ -1,0 +1,11 @@
+# nodes threads rpn ndiag ntg electrons
+n8/knl_n8_t1/pw-64rpn-1t-4pool-121diag-16ntg.out:     electrons    :    412.25s CPU    424.70s WALL (       1 calls)
+n16/knl_n16_t1/pw-64rpn-1t-4pool-256diag-16ntg.out:     electrons    :    266.17s CPU    272.65s WALL (       1 calls)
+n32/knl_n32_t1/pw-64rpn-1t-4pool-484diag-16ntg.out:     electrons    :    183.19s CPU    188.29s WALL (       1 calls)
+n64/knl_n64_t1/pw-64rpn-1t-4pool-1024diag-16ntg.out:     electrons    :    153.09s CPU    157.71s WALL (       1 calls)
+# OpenMP
+n8/knl_n8_t2/pw-32rpn-2t-4pool-64diag-16ntg.out:     electrons    :    789.21s CPU    420.31s WALL (       1 calls)
+n16/knl_n16_t2/pw-32rpn-2t-4pool-121diag-16ntg.out:     electrons    :    463.16s CPU    246.77s WALL (       1 calls)
+n32/knl_n32_t2/pw-32rpn-2t-4pool-256diag-16ntg.out:     electrons    :    303.15s CPU    164.27s WALL (       1 calls)
+n64/knl_n64_t4/pw-16rpn-4t-4pool-256diag-8ntg.out:     electrons    :    434.06s CPU    117.68s WALL (       1 calls)
+n128/knl_n128_t4/pw-16rpn-4t-4pool-484diag-16ntg.out:     electrons    :    359.13s CPU     98.64s WALL (       1 calls)

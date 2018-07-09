@@ -1,0 +1,44 @@
+#!/bin/bash
+#SBATCH -J test
+#SBATCH -A QEperformance
+#SBATCH -p bdwall
+#SBATCH -N 16
+#SBATCH --ntasks-per-node=36
+#SBATCH -t 02:00:00
+
+my_path=~/bin/qe-6.3/bdw-omp
+exe=$my_path/pw.x
+
+HT=1
+npool=4
+
+PROCS_PERNODE=18
+PROCS=$((SLURM_JOB_NUM_NODES * PROCS_PERNODE))
+PROCS_pool=$((PROCS / npool))
+export OMP_NUM_THREADS=$((36 / PROCS_PERNODE))
+export SLURM_TASKS_PER_NODE="$PROCS_PERNODE(x$SLURM_JOB_NUM_NODES)"
+
+ndiag=$(echo "sqrt ( $PROCS_pool )" | bc )
+ndiag=$(( ndiag * ndiag ))
+
+
+export I_MPI_PROVIDER=psm2
+export I_MPI_FALLBACK=0
+export I_MPI_FABRICS=shm:tmi
+export PSM2_RCVTHREAD=0
+export TMI_PSM2_TEST_POLL=1
+
+folder=bdw_n${SLURM_JOB_NUM_NODES}_t${OMP_NUM_THREADS}
+mkdir $folder
+cd $folder
+
+cp ../../psiwat.in .
+
+for ntg in 1 2 3 4 6 8
+do
+mpirun $exe -npool $npool -ntg $ntg -ndiag $ndiag -inp psiwat.in > pw-${PROCS_PERNODE}rpn-${OMP_NUM_THREADS}t-${npool}pool-${ndiag}diag-${ntg}ntg.out
+done
+
+rm -r out
+
+cd ..
