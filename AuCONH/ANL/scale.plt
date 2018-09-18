@@ -13,11 +13,10 @@ set ylabel "Speed-up"
 ref1=485.16
 ref2=444.17
 
-#  '< grep t1 LCRC-Bebop-v6.2/scaling_bdw.dat' u (log($1)/log(2)-3):(log(ref1/$6)/log(2)) w lp t "v6.2 MPI only", \
-#  '< grep -v t1 LCRC-Bebop-v6.2/scaling_bdw.dat' u (log($1)/log(2)-3):(log(ref1/$6)/log(2)) w lp t "v6.2 MPI/OpenMP", \
-
-p '< grep t1 LCRC-Bebop/scaling_bdw.dat' u (log($1)/log(2)-3):(log(ref2/$6)/log(2)) w lp lw 2 pt 8 ps 1.5 t "v6.3 MPI only", \
-  '< grep -v t1 LCRC-Bebop/scaling_bdw.dat' u (log($1)/log(2)-3):(log(ref2/$6)/log(2)) w lp lw 2 pt 4 ps 1.5 t "v6.3 MPI/OpenMP", \
+p '< grep t1 LCRC-Bebop-v6.2/scaling_bdw.dat' u (log($1)/log(2)-3):(log(ref2/$6)/log(2)) w lp lw 2 pt 8 ps 1.2 t "v6.2 MPI only", \
+  '< grep -v t1 LCRC-Bebop-v6.2/scaling_bdw.dat' u (log($1)/log(2)-3):(log(ref2/$6)/log(2)) w lp lw 2 pt 4 ps 1.2 t "v6.2 MPI/OpenMP", \
+  '< grep t1 LCRC-Bebop/scaling_bdw.dat' u (log($1)/log(2)-3):(log(ref2/$6)/log(2)) w lp lw 2 pt 9 ps 1.2 t "v6.3 MPI only", \
+  '< grep -v t1 LCRC-Bebop/scaling_bdw.dat' u (log($1)/log(2)-3):(log(ref2/$6)/log(2)) w lp lw 2 pt 5 ps 1.2 t "v6.3 MPI/OpenMP", \
   x lc 0 lw 2 t ""
 
 #pause -1
@@ -34,9 +33,8 @@ ref2=415.46
 
 set output "scaling_knl.svg"
 
-#  '< grep t1 LCRC-Bebop-v6.2/scaling_knl.dat' u (log($1)/log(2)-3):(log(ref1/$6)/log(2)) w lp t "v6.2 MPI only", \
-#  '< grep -v t1 LCRC-Bebop-v6.2/scaling_knl.dat' u (log($1)/log(2)-3):(log(ref1/$6)/log(2)) w lp t "v6.2 MPI/OpenMP", \
-
-p '< grep t1 LCRC-Bebop/scaling_knl.dat' u (log($1)/log(2)-3):(log(ref2/$6)/log(2)) w lp lw 2 pt 8 ps 1.5 t "v6.3 MPI only", \
-  '< grep -v t1 LCRC-Bebop/scaling_knl.dat' u (log($1)/log(2)-3):(log(ref2/$6)/log(2)) w lp lw 2 pt 4 ps 1.5 t "v6.3 MPI/OpenMP", \
+p '< grep t1 LCRC-Bebop-v6.2/scaling_knl.dat' u (log($1)/log(2)-3):(log(ref2/$6)/log(2)) w lp lw 2 pt 8 ps 1.2 t "v6.2 MPI only", \
+  '< grep -v t1 LCRC-Bebop-v6.2/scaling_knl.dat' u (log($1)/log(2)-3):(log(ref2/$6)/log(2)) w lp lw 2 pt 4 ps 1.2 t "v6.2 MPI/OpenMP", \
+  '< grep t1 LCRC-Bebop/scaling_knl.dat' u (log($1)/log(2)-3):(log(ref2/$6)/log(2)) w lp lw 2 pt 9 ps 1.2 t "v6.3 MPI only", \
+  '< grep -v t1 LCRC-Bebop/scaling_knl.dat' u (log($1)/log(2)-3):(log(ref2/$6)/log(2)) w lp lw 2 pt 5 ps 1.2 t "v6.3 MPI/OpenMP", \
   x lc 0 lw 2 t ""
