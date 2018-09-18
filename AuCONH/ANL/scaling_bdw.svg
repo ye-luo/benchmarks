@@ -108,35 +108,37 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 	<g id="gnuplot_plot_1" ><title>v6.3 MPI only</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="white" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(378.3,77.3)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >v6.3 MPI only</tspan></text>
 	</g>
 </g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(148,   0, 211)'  d='M395.0,69.5 L479.8,69.5 M111.1,652.8 L302.8,529.4 L494.5,422.7 L686.2,341.3 L877.9,293.1  '/>	<use xlink:href='#gpPt0' transform='translate(302.8,529.4) scale(9.00)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt0' transform='translate(494.5,422.7) scale(9.00)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt0' transform='translate(686.2,341.3) scale(9.00)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt0' transform='translate(877.9,293.1) scale(9.00)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt0' transform='translate(437.4,69.5) scale(9.00)' color='rgb(148,   0, 211)'/>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(148,   0, 211)'  d='M395.0,69.5 L479.8,69.5 M111.1,652.8 L302.8,529.4 L494.5,422.7 L686.2,341.3 L877.9,293.1  '/>	<use xlink:href='#gpPt7' transform='translate(302.8,529.4) scale(13.50)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt7' transform='translate(494.5,422.7) scale(13.50)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt7' transform='translate(686.2,341.3) scale(13.50)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt7' transform='translate(877.9,293.1) scale(13.50)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt7' transform='translate(437.4,69.5) scale(13.50)' color='rgb(148,   0, 211)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_2" ><title>v6.3 MPI/OpenMP</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(378.3,113.3)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >v6.3 MPI/OpenMP</tspan></text>
 	</g>
 </g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0, 158, 115)'  d='M395.0,105.5 L479.8,105.5 M111.1,645.2 L302.8,524.9 L494.5,411.7 L686.2,309.5 L877.9,237.4  '/>	<use xlink:href='#gpPt1' transform='translate(302.8,524.9) scale(9.00)' color='rgb(  0, 158, 115)'/>
-	<use xlink:href='#gpPt1' transform='translate(494.5,411.7) scale(9.00)' color='rgb(  0, 158, 115)'/>
-	<use xlink:href='#gpPt1' transform='translate(686.2,309.5) scale(9.00)' color='rgb(  0, 158, 115)'/>
-	<use xlink:href='#gpPt1' transform='translate(877.9,237.4) scale(9.00)' color='rgb(  0, 158, 115)'/>
-	<use xlink:href='#gpPt1' transform='translate(437.4,105.5) scale(9.00)' color='rgb(  0, 158, 115)'/>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(  0, 158, 115)'  d='M395.0,105.5 L479.8,105.5 M111.1,645.2 L302.8,524.9 L494.5,411.7 L686.2,309.5 L877.9,237.4  '/>	<use xlink:href='#gpPt3' transform='translate(302.8,524.9) scale(13.50)' color='rgb(  0, 158, 115)'/>
+	<use xlink:href='#gpPt3' transform='translate(494.5,411.7) scale(13.50)' color='rgb(  0, 158, 115)'/>
+	<use xlink:href='#gpPt3' transform='translate(686.2,309.5) scale(13.50)' color='rgb(  0, 158, 115)'/>
+	<use xlink:href='#gpPt3' transform='translate(877.9,237.4) scale(13.50)' color='rgb(  0, 158, 115)'/>
+	<use xlink:href='#gpPt3' transform='translate(437.4,105.5) scale(13.50)' color='rgb(  0, 158, 115)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_3" ><title>gnuplot_plot_3</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='gray'  d='M111.1,652.8 L119.8,646.5 L128.5,640.3 L137.2,634.0 L146.0,627.8 L154.7,621.5 L163.4,615.3 L172.1,609.0
 		L180.8,602.8 L189.5,596.5 L198.2,590.2 L207.0,584.0 L215.7,577.7 L224.4,571.5 L233.1,565.2 L241.8,559.0
 		L250.5,552.7 L259.2,546.5 L268.0,540.2 L276.7,533.9 L285.4,527.7 L294.1,521.4 L302.8,515.2 L311.5,508.9
@@ -151,8 +153,6 @@
 		L877.9,102.3 L886.7,96.1 L895.4,89.8 L904.1,83.5 L912.8,77.3 L921.5,71.0 L930.2,64.8 L938.9,58.5
 		L947.7,52.3 L956.4,46.0 L965.1,39.8 L973.8,33.5  '/></g>
 	</g>
-<g fill="none" color="white" stroke="gray" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
