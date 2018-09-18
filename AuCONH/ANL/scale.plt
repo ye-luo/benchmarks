@@ -1,5 +1,8 @@
 reset
 
+set term svg size 1024,768 font ',24'
+set output "scaling_bdw.svg"
+
 set key left top
 set xrange [0:4.5]
 set xtics ("8" 0, "16" 1, "32" 2, "64" 3, "128" 4)
@@ -28,6 +31,8 @@ set ylabel "Speed-up"
 
 #ref1=
 ref2=415.46
+
+set output "scaling_knl.svg"
 
 #  '< grep t1 LCRC-Bebop-v6.2/scaling_knl.dat' u (log($1)/log(2)-3):(log(ref1/$6)/log(2)) w lp t "v6.2 MPI only", \
 #  '< grep -v t1 LCRC-Bebop-v6.2/scaling_knl.dat' u (log($1)/log(2)-3):(log(ref1/$6)/log(2)) w lp t "v6.2 MPI/OpenMP", \
