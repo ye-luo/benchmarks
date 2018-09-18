@@ -24,6 +24,9 @@ p '< grep " 1ntg"  LCRC-Bebop-v6.2/'.folder.'/time_'.arch.'.dat'  u ($0-7*wbox/2
 
 pause -1
 
+set term svg size 1024,768 font ',24'
+set output "hpsi_bdw.svg"
+set key top left maxrows 4
 #set yrange [30:]
 set ylabel "Time spent in hpsi / sec"
 p '< grep " 1ntg"  LCRC-Bebop-v6.2/'.folder.'/time_'.arch.'.dat'  u ($0-7*wbox/2):7 with boxes fs solid 0.5 lc 1 t 'v6.2 ntg-1', \
