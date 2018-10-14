@@ -1,0 +1,1 @@
+OMP_PLACES=cores OMP_NUM_THREADS=8 mpirun -np 4 -bind-to core:8 /sandbox/opt/qe-stable/qe-6.3-omp/bin/pw.x -ndiag 4 -inp sic512.inp | tee sic512.out

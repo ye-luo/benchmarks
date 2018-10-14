@@ -1,0 +1,1 @@
+mpirun -np 32 -bind-to core /sandbox/opt/qe-stable/qe-6.3/bin/pw.x -ndiag 25 -inp sic512.inp | tee sic512.out
