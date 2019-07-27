@@ -1,0 +1,21 @@
+#!/bin/bash
+# Begin LSF directives
+#BSUB -P MAT189
+#BSUB -J test
+#BSUB -o tst.o%J
+#BSUB -W 30
+#BSUB -nnodes 4
+#BSUB -alloc_flags smt1
+# End LSF directives and begin shell commands
+
+NNODES=$(((LSB_DJOB_NUMPROC-1)/42))
+RS_PER_NODE=6
+
+exe=/ccs/home/yeluo/opt/q-e-gpu/bin/pw.x
+
+prefix=psiwat
+
+#jsrun -n $((NNODES*RS_PER_NODE)) -a 1 -c 1 -r $RS_PER_NODE -d packed -b rs $exe -nk 4 -inp $prefix.in > $prefix.out
+
+export OMP_NUM_THREADS=7
+jsrun -n $((NNODES*RS_PER_NODE)) -a 1 -c $OMP_NUM_THREADS -g 1 -r $RS_PER_NODE -d packed -b rs $exe -nk 4 -inp $prefix.in > $prefix.out

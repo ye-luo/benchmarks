@@ -1,0 +1,20 @@
+#!/bin/bash
+# Begin LSF directives
+#BSUB -P MAT189
+#BSUB -J test
+#BSUB -o tst.o%J
+#BSUB -W 30
+#BSUB -nnodes 4
+#BSUB -alloc_flags smt1
+# End LSF directives and begin shell commands
+
+NNODES=$(((LSB_DJOB_NUMPROC-1)/42))
+RS_PER_NODE=42
+
+exe=/ccs/home/yeluo/opt/qmcpack/external_codes/quantum_espresso/qe-6.4.1/bin/pw.x
+exe=/ccs/home/yeluo/opt/q-e/bin/pw.x
+
+prefix=psiwat
+
+OMP_NUM_THREADS=1
+jsrun -n $((NNODES*RS_PER_NODE)) -a 1 -c 1 -r $RS_PER_NODE -d packed -b rs $exe -nk 4 -nd 36 -inp $prefix.in > $prefix.out
